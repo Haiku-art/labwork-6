@@ -25,7 +25,8 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   
-  },  {
+  },
+  {
     path: 'amenities',
     loadChildren: () => import('./pages/amenities/amenities.module').then( m => m.AmenitiesPageModule)
   },
@@ -37,7 +38,15 @@ const routes: Routes = [
     path: 'sleeptips',
     loadChildren: () => import('./pages/sleeptips/sleeptips.module').then( m => m.SleeptipsPageModule)
   },
-
+  {
+    path: 'not-found',
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundPageModule)
+  },
+  
 ];
 
 @NgModule({
