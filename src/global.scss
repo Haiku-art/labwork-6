@@ -44,7 +44,11 @@ ion-toolbar {
 
 ion-menu-button {--color: white;}
 
-/* ion-title {
-  --color: white;
-  font-family: 'Montserrat', sans-serif;
-} */
+#toolbarLogoSmall{
+  margin-right: 16px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}

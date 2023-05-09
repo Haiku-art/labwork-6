@@ -43,6 +43,14 @@ const routes: Routes = [
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
   {
+    path: 'gym-equipments',
+    loadChildren: () => import('./pages/gym-equipments/gym-equipments.module').then( m => m.GymEquipmentsPageModule)
+  },
+
+//-------------------------------------------------------------------------------------------------------
+// Jätä reitti ** viimeiseksi, muuten navigoi aina not-found -sivulle.
+//-------------------------------------------------------------------------------------------------------
+  {
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundPageModule)
   },
